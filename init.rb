@@ -1,8 +1,1 @@
-require "sprockets"
-
-require "sprocket"
-require "sprockets_helper"
-
-class ActionController::Base
-  helper :sprockets
-end
+load File.join(File.dirname(__FILE__), "rails", "init.rb")

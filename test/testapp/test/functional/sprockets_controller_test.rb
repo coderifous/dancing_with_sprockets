@@ -4,7 +4,7 @@ class SprocketsControllerTest < ActionController::TestCase
   include SprocketsHelper
   include ActionView::Helpers
 
-   test "can get application.js" do
+  test "can get application.js" do
     get :show, :file => "application"
     assert_response :success
     assert_equal 'text/javascript', @response.content_type
