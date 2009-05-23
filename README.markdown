@@ -1,13 +1,17 @@
 `dancing_with_sprockets`
 =======================
 
-This `dancing_with_sprockets` plugin makes it easy to use [Sprockets](http://github.com/sstephenson/sprockets) in your Rails application
+The `dancing_with_sprockets` rails engine plugin makes it easy to use [Sprockets](http://github.com/sstephenson/sprockets) in your Rails application
 
 `dancing_with_sprockets` includes a controller named `SprocketsController` that renders your application's Sprockets concatenation. When caching is enabled, e.g. in production mode, `SprocketsController` uses Rails page caching to save the concatenated output the first time it is requested. When caching is disabled, e.g. in development mode, `SprocketsController` will render a fresh concatenation any time a source file changes.
 
 This plugin makes it _easy_ to use sprockets with rails.  Just `script/plugin install` and write your javascript. Done.
 
 ## _Your narrative has become tiresome._
+
+## A note about the required Rails version
+
+  This is a rails engine plugin so it requres Rails > 2.3, however it started as a regular plugin (not engine).  So if you want to use this plugin w/o upgrading to rails 2.3 for some reason, then you could just checkout the commit tagged `pre_rails23_plugin` of the `dancing_with_sprockets` plugin.
 
 ## Installation
 
