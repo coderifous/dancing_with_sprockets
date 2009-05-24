@@ -1,7 +1,5 @@
 config.gem 'sprockets'
 
-require "sprockets"
-
 require "sprocket"
 require "sprockets_helper"
 
