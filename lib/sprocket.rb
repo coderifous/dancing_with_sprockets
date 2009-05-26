@@ -7,7 +7,7 @@ class Sprocket
   def configuration_from_convention(name)
     { :asset_root   => "public",
       :load_path    => %w(app/javascripts),
-      :source_files => "app/javascripts/#{name}.js" }
+      :source_files => [ "app/javascripts/#{name}.js" ] }
   end
 
   def source
