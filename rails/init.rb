@@ -1,8 +1,12 @@
-config.gem 'sprockets'
+gem 'sprockets'
 
 require "sprocket"
 require "sprockets_helper"
 
-config.to_prepare do
-  ApplicationController.helper(SprocketsHelper)
+init_block = lambda { ApplicationController.helper(SprocketsHelper) }
+
+if defined? ActionDispatch::Callbacks
+    ActionDispatch::Callbacks.before_dispatch(&init_block)
+else
+    config.to_prepare(&init_block)
 end
